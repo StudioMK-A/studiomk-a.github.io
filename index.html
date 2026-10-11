@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Studio MK • Créations</title>
+  <meta name="description" content="Extensions Chrome et solutions IA pour étudiants et professionnels, créées par le Studio MK : des outils calmes pour rester concentré." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Studio MK • Créations" />
+  <meta property="og:description" content="Des extensions Chrome et des outils IA calmes et utiles, partagés gratuitement." />
+  <meta property="og:url" content="https://studiomk-a.github.io/" />
+  <link rel="canonical" href="https://studiomk-a.github.io/" />
+  <link rel="icon" href="assets/icons/studio-mk.svg" type="image/svg+xml" />
+  <!-- Valeurs du design system (ne pas modifier : régénérées depuis design-tokens.json). -->
+  <link rel="stylesheet" href="docs/design-system/generated/tokens.css" />
+  <link rel="stylesheet" href="css/studio.css" />
+</head>
+<body>
+  <!-- 1. Fond à trois halos (DESIGN §2.4) -->
+  <div class="blob-backdrop" aria-hidden="true"></div>
+
+  <div class="page">
+    <!-- 2. En-tête -->
+    <header class="site-header">
+      <span class="monogram" aria-hidden="true">MK</span>
+      <div>
+        <h1 class="page-title">Studio <span class="brand-mk">MK</span></h1>
+        <p class="hint">Extensions Chrome et solutions IA pour étudiants et professionnels</p>
+      </div>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="nouveautes.html">Nouveautés</a>
+        <a href="studio.html">Le studio</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 3. Introduction : seule grande surface en verre -->
+      <section class="intro card kf-glass-card" aria-labelledby="intro-title">
+        <span class="label">Présentation</span>
+        <h2 id="intro-title" class="block-title">Des outils calmes pour travailler mieux</h2>
+        <p class="body">
+          Retrouvez ici toutes les créations du <a class="signature-mark" href="studio.html">studio <span class="signature-mk">MK</span></a> : des extensions Chrome qui aident à rester concentré
+          et des solutions IA qui simplifient le travail quotidien.
+        </p>
+        <div class="intro-footer">
+          <span class="counter"><span id="total-count" class="tabular">7</span> créations</span>
+          <a class="btn btn-primary" href="#creations">Voir les créations</a>
+        </div>
+      </section>
+
+      <!-- 4. Filtres et recherche -->
+      <nav class="toolbar" aria-label="Filtrer les créations">
+        <div class="filters" role="group" aria-label="Type de création">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">Tout</button>
+          <button class="filter" type="button" data-filter="extension" aria-pressed="false">Extensions Chrome</button>
+          <button class="filter" type="button" data-filter="ia" aria-pressed="false">Solutions IA</button>
+        </div>
+        <label class="search">
+          <span class="visually-hidden">Rechercher une création</span>
+          <input id="search" class="field" type="search" placeholder="Rechercher" autocomplete="off" />
+        </label>
+      </nav>
+
+      <!-- 5. Grille des créations (cartes opaques : pas de verre dans une grille répétée, DESIGN §4.2) -->
+      <section id="creations" aria-labelledby="creations-title">
+        <div class="section-head">
+          <h2 id="creations-title" class="section-title"><a class="signature-mark" href="studio.html">Studio <span class="signature-mk">MK</span></a> • Créations</h2>
+          <span id="visible-count" class="hint tabular" aria-live="polite"></span>
+        </div>
+        <!-- Cartes écrites par tools/build-pages.js à partir de js/projects.js : ne pas modifier à la main. -->
+        <div id="project-grid" class="project-grid">
+          <!-- build:cards -->
+          <article class="project" data-type="extension" data-search="keep focus restez concentré sur vos objectifs de la semaine. bloque les sites qui distraient pendant une session, rappelle vos objectifs dans une pastille discrète et freine honnêtement l'arrêt d'une session. concentration blocage productivité objectifs focus">
+            <div class="project-head">
+              <div class="project-icon has-image" aria-hidden="true"><img src="assets/icons/keep-focus/icon128.png" alt="" width="48" height="48" /></div>
+              <div>
+                <h3 class="project-name"><a class="project-name-link" href="creations/keep-focus.html">Keep Focus</a></h3>
+                <span class="label project-type">Extension Chrome</span>
+              </div>
+            </div>
+            <p class="project-tagline">Restez concentré sur vos objectifs de la semaine.</p>
+            <p class="hint project-desc">Bloque les sites qui distraient pendant une session, rappelle vos objectifs dans une pastille discrète et freine honnêtement l'arrêt d'une session.</p>
+            <div class="project-foot">
+              <span class="status status-bientot">Bientôt</span>
+              <div class="project-links"><a class="link" href="creations/keep-focus.html">Découvrir</a><span class="link link-quiet">Ajouter à Chrome : sera bientôt disponible</span></div>
+            </div>
+          </article>
+          <article class="project" data-type="extension" data-search="l'essentiel le résumé d'une page en un clic, à emporter où vous voulez. résume l'article ou la page ouverte en quelques points clés, avec l'ia intégrée à chrome quand elle est disponible. puis continuez la réflexion dans claude ou chatgpt, ou envoyez le résumé par e-mail. résumé lecture ia claude chatgpt e-mail article">
+            <div class="project-head">
+              <div class="project-icon has-image" aria-hidden="true"><img src="assets/icons/l-essentiel/icon128.png" alt="" width="48" height="48" /></div>
+              <div>
+                <h3 class="project-name">L'Essentiel</h3>
+                <span class="label project-type">Extension Chrome</span>
+              </div>
+            </div>
+            <p class="project-tagline">Le résumé d'une page en un clic, à emporter où vous voulez.</p>
+            <p class="hint project-desc">Résume l'article ou la page ouverte en quelques points clés, avec l'IA intégrée à Chrome quand elle est disponible. Puis continuez la réflexion dans Claude ou ChatGPT, ou envoyez le résumé par e-mail.</p>
+            <div class="project-foot">
+              <span class="status status-avenir">À venir</span>
+              <div class="project-links"></div>
+            </div>
+          </article>
+          <article class="project" data-type="extension" data-search="plus tard mettez une pensée de côté sans quitter votre travail. une idée, un lien ou une tâche surgit en pleine concentration ? un raccourci suffit pour la noter. tout est classé et vous attend à la fin de la session, dans votre navigateur. le compagnon naturel de keep focus. idées notes liens concentration keep focus plus tard">
+            <div class="project-head">
+              <div class="project-icon has-image" aria-hidden="true"><img src="assets/icons/plus-tard/icon128.png" alt="" width="48" height="48" /></div>
+              <div>
+                <h3 class="project-name">Plus tard</h3>
+                <span class="label project-type">Extension Chrome</span>
+              </div>
+            </div>
+            <p class="project-tagline">Mettez une pensée de côté sans quitter votre travail.</p>
+            <p class="hint project-desc">Une idée, un lien ou une tâche surgit en pleine concentration ? Un raccourci suffit pour la noter. Tout est classé et vous attend à la fin de la session, dans votre navigateur. Le compagnon naturel de <a class="link" href="creations/keep-focus.html">Keep Focus</a>.</p>
+            <div class="project-foot">
+              <span class="status status-avenir">À venir</span>
+              <div class="project-links"></div>
+            </div>
+          </article>
+          <article class="project" data-type="ia" data-search="objectifs clairs transformez une intention floue en trois objectifs concrets. décrivez ce que vous voulez accomplir, même en vrac. l'ia intégrée à chrome en tire trois objectifs précis et réalistes pour la semaine, prêts à noter dans keep focus. vos textes restent sur votre appareil. objectifs semaine planification ia keep focus">
+            <div class="project-head">
+              <div class="project-icon has-image" aria-hidden="true"><img src="assets/icons/objectifs-clairs/icon128.png" alt="" width="48" height="48" /></div>
+              <div>
+                <h3 class="project-name"><a class="project-name-link" href="creations/objectifs-clairs.html">Objectifs clairs</a></h3>
+                <span class="label project-type">Solution IA</span>
+              </div>
+            </div>
+            <p class="project-tagline">Transformez une intention floue en trois objectifs concrets.</p>
+            <p class="hint project-desc">Décrivez ce que vous voulez accomplir, même en vrac. L'IA intégrée à Chrome en tire trois objectifs précis et réalistes pour la semaine, prêts à noter dans <a class="link" href="creations/keep-focus.html">Keep Focus</a>. Vos textes restent sur votre appareil.</p>
+            <div class="project-foot">
+              <span class="status status-disponible">Disponible</span>
+              <div class="project-links"><a class="link" href="creations/objectifs-clairs.html">Découvrir</a><a class="link" href="objectifs-clairs.html">Essayer</a></div>
+            </div>
+          </article>
+          <article class="project" data-type="ia" data-search="valeurs savoir ce qui compte vraiment pour vous. choisissez les quelques valeurs qui guident vos choix. elles deviennent la boussole de vos objectifs et de vos journées. valeurs sens boussole priorités">
+            <div class="project-head">
+              <div class="project-icon has-image" aria-hidden="true"><img src="assets/icons/valeurs/icon128.png" alt="" width="48" height="48" /></div>
+              <div>
+                <h3 class="project-name">Valeurs</h3>
+                <span class="label project-type">Solution IA</span>
+              </div>
+            </div>
+            <p class="project-tagline">Savoir ce qui compte vraiment pour vous.</p>
+            <p class="hint project-desc">Choisissez les quelques valeurs qui guident vos choix. Elles deviennent la boussole de vos objectifs et de vos journées.</p>
+            <div class="project-foot">
+              <span class="status status-avenir">À venir</span>
+              <div class="project-links"></div>
+            </div>
+          </article>
+          <article class="project" data-type="ia" data-search="vision voir où vous voulez aller. décrivez en quelques phrases où vous voulez être dans un an, ou dans trois. vos objectifs de la semaine vous en rapprochent, pas à pas. vision avenir direction long terme">
+            <div class="project-head">
+              <div class="project-icon has-image" aria-hidden="true"><img src="assets/icons/vision/icon128.png" alt="" width="48" height="48" /></div>
+              <div>
+                <h3 class="project-name">Vision</h3>
+                <span class="label project-type">Solution IA</span>
+              </div>
+            </div>
+            <p class="project-tagline">Voir où vous voulez aller.</p>
+            <p class="hint project-desc">Décrivez en quelques phrases où vous voulez être dans un an, ou dans trois. Vos objectifs de la semaine vous en rapprochent, pas à pas.</p>
+            <div class="project-foot">
+              <span class="status status-avenir">À venir</span>
+              <div class="project-links"></div>
+            </div>
+          </article>
+          <article class="project" data-type="ia" data-search="mission donner un sens à ce que vous faites. une phrase qui dit ce que vous faites, et pour qui. elle vous accompagne discrètement, à côté de vos objectifs. mission sens raison d'être">
+            <div class="project-head">
+              <div class="project-icon has-image" aria-hidden="true"><img src="assets/icons/mission/icon128.png" alt="" width="48" height="48" /></div>
+              <div>
+                <h3 class="project-name">Mission</h3>
+                <span class="label project-type">Solution IA</span>
+              </div>
+            </div>
+            <p class="project-tagline">Donner un sens à ce que vous faites.</p>
+            <p class="hint project-desc">Une phrase qui dit ce que vous faites, et pour qui. Elle vous accompagne discrètement, à côté de vos objectifs.</p>
+            <div class="project-foot">
+              <span class="status status-avenir">À venir</span>
+              <div class="project-links"></div>
+            </div>
+          </article>
+          <!-- /build:cards -->
+        </div>
+        <p id="empty-state" class="empty-state" hidden>Aucune création dans cette catégorie.</p>
+      </section>
+
+      <!-- 6. Contact -->
+      <section class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title-quiet">Un projet en tête ?</h2>
+        <div class="contact-box card kf-glass-soft">
+          <p class="body">Une idée d'extension ou d'outil IA ? Parlons-en.</p>
+          <div class="contact-action">
+            <a class="btn btn-secondary" href="mailto:myrokova.a@gmail.com?subject=Studio%20MK">Me contacter</a>
+            <span class="contact-mail">myrokova.a@gmail.com</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 7. Signature -->
+    <footer class="site-footer">
+      <nav class="legal-nav" aria-label="Engagements et informations légales">
+        <a href="constitution.html">Notre Constitution</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+        <a href="cookies.html">Gestion des cookies</a>
+        <a href="cgu.html">Conditions d'utilisation</a>
+      </nav>
+      <p class="signature">Créé par le <a class="signature-mark" href="studio.html">studio <span class="signature-mk">MK</span></a></p>
+    </footer>
+  </div>
+
+  <!-- Filtres et recherche sur les cartes déjà présentes dans la page. -->
+  <script src="js/app.js"></script>
+</body>
+</html>

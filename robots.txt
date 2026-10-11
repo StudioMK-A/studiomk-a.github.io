@@ -1,0 +1,5 @@
+# Studio MK : tout le site est ouvert aux moteurs de recherche et aux robots d'IA.
+User-agent: *
+Allow: /
+
+Sitemap: https://studiomk-a.github.io/sitemap.xml

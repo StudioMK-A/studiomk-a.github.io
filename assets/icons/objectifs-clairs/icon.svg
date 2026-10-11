@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Objectifs clairs">
+  <defs><clipPath id="oc-lens"><path d="M 13.03 71.68 A 58.22 58.22 0 0 1 114.97 71.68 A 58.22 58.22 0 0 1 13.03 71.68 Z" /></clipPath></defs>
+  <g stroke="#5e5ce6" stroke-width="5.12" stroke-linecap="round"><line x1="40.32" y1="30.67" x2="33.92" y2="19.58" /><line x1="64" y1="24.32" x2="64" y2="11.52" /><line x1="87.68" y1="30.67" x2="94.08" y2="19.58" /></g>
+  <path d="M 5.12 71.68 A 65.26 65.26 0 0 1 122.88 71.68 A 65.26 65.26 0 0 1 5.12 71.68 Z" fill="#3a3a3c" />
+  <path d="M 13.03 71.68 A 58.22 58.22 0 0 1 114.97 71.68 A 58.22 58.22 0 0 1 13.03 71.68 Z" fill="#ffffff" />
+  <g clip-path="url(#oc-lens)">
+    <circle cx="64" cy="71.68" r="30.08" fill="#5e5ce6" />
+    <circle cx="64" cy="71.68" r="19.2" fill="#ffffff" />
+    <circle cx="64" cy="71.68" r="9.6" fill="#5e5ce6" />
+    <circle cx="47.36" cy="55.04" r="3.84" fill="#ffffff" />
+  </g>
+</svg>

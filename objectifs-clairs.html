@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Objectifs clairs • Studio MK</title>
+  <meta name="description" content="Transformez une intention floue en trois objectifs concrets pour la semaine. Gratuit, sans compte : vos textes restent sur votre appareil." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Objectifs clairs • Studio MK" />
+  <meta property="og:description" content="Trois objectifs clairs pour votre semaine, en quelques secondes. Vos textes restent sur votre appareil." />
+  <meta property="og:url" content="https://studiomk-a.github.io/objectifs-clairs.html" />
+  <!-- Page outil : Keep Focus peut y appliquer la couleur choisie par l'utilisateur (connexion « Couleur de vos outils »). -->
+  <meta name="studio-mk-tool" content="objectifs-clairs" />
+  <link rel="canonical" href="https://studiomk-a.github.io/objectifs-clairs.html" />
+  <link rel="icon" href="assets/icons/objectifs-clairs/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="docs/design-system/generated/tokens.css" />
+  <link rel="stylesheet" href="css/studio.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+  <link rel="stylesheet" href="css/objectifs.css" />
+  <!-- Couleur d'accent d'Objectifs clairs (#5e5ce6, pastille du design system) et ses nuances dérivées (DESIGN §2.2). -->
+  <style>
+    :root {
+      --color-accent: #5e5ce6;
+      --color-accent-hover: #4f4dc1;
+      --color-accent-text: #5e5ce6;
+      --color-accent-contrast: #ffffff;
+      --accent-rgb: 94, 92, 230;
+    }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Objectifs clairs","description":"Transformez une intention floue en trois objectifs concrets pour la semaine.","applicationCategory":"ProductivityApplication","operatingSystem":"Google Chrome","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","name":"Studio MK"}}</script>
+</head>
+<body>
+  <div class="blob-backdrop" aria-hidden="true"></div>
+
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="monogram" aria-hidden="true">MK</span>
+        <span class="brand-name">Studio <span class="brand-mk">MK</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="index.html#creations">Créations</a>
+        <a href="nouveautes.html">Nouveautés</a>
+        <a href="studio.html">Le studio</a>
+      </nav>
+    </header>
+
+    <main class="oc-main">
+      <section class="oc-intro" aria-labelledby="oc-title">
+        <img class="hero-icon" src="assets/icons/objectifs-clairs/icon128.png" alt="" width="48" height="48" />
+        <span class="label">Objectifs clairs</span>
+        <h1 id="oc-title" class="hero-title">Trois objectifs clairs pour votre semaine</h1>
+        <p class="body-large">Écrivez ce que vous voulez accomplir, même en vrac. Vous repartez avec trois objectifs concrets et réalistes, prêts à noter dans <a class="link" href="creations/keep-focus.html">Keep Focus</a>.</p>
+      </section>
+
+      <section class="oc-card card kf-glass-card" aria-label="Définir vos objectifs">
+        <!-- Étape 1 : les intentions (mode assistant) -->
+        <div id="oc-step-intent">
+          <label class="oc-step-label" for="oc-intent"><span class="step-index" aria-hidden="true">1</span>Vos intentions, en vrac</label>
+          <textarea id="oc-intent" class="oc-textarea" rows="5" maxlength="1500"
+            placeholder="Ex. finir le dossier pour le client, chercher un stage pour l'été, me remettre au sport, ranger mes papiers..."></textarea>
+          <div class="oc-row">
+            <button id="oc-propose" class="btn btn-primary" type="button" disabled>Proposer trois objectifs</button>
+            <p id="oc-status" class="hint oc-status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <!-- Mode sans assistant (IA de Chrome indisponible sur cet appareil) -->
+        <div id="oc-manual-tips" class="oc-tips" hidden>
+          <p class="oc-tips-title">Un bon objectif, en trois points</p>
+          <ul>
+            <li>Il commence par un verbe d'action : « Envoyer », « Terminer », « Réserver ».</li>
+            <li>Son résultat se voit : on sait dire, vendredi, s'il est atteint.</li>
+            <li>Il tient dans la semaine : un grand projet se découpe en une étape.</li>
+          </ul>
+        </div>
+
+        <!-- Étape 2 : les trois objectifs, toujours modifiables -->
+        <div id="oc-step-goals" class="oc-goals" hidden>
+          <p class="oc-step-label"><span class="step-index" aria-hidden="true">2</span><span id="oc-goals-title" tabindex="-1">Vos trois objectifs, à ajuster si besoin</span></p>
+          <div class="goal"><span class="goal-index">1</span><input class="oc-goal field" type="text" maxlength="80" aria-label="Objectif 1" /></div>
+          <div class="goal"><span class="goal-index">2</span><input class="oc-goal field" type="text" maxlength="80" aria-label="Objectif 2" /></div>
+          <div class="goal"><span class="goal-index">3</span><input class="oc-goal field" type="text" maxlength="80" aria-label="Objectif 3" /></div>
+          <div class="oc-row">
+            <button id="oc-send" class="btn btn-primary" type="button" hidden>Envoyer dans Keep Focus</button>
+            <button id="oc-copy" class="btn btn-primary" type="button">Copier pour Keep Focus</button>
+            <button id="oc-again" class="btn-link" type="button">Proposer d'autres objectifs</button>
+          </div>
+          <p id="oc-copy-status" class="hint oc-status" role="status" aria-live="polite">Collez-les dans <a class="link" href="creations/keep-focus.html">Keep Focus</a>, ou installez-la : vos objectifs pourront y être envoyés directement.</p>
+        </div>
+
+        <!-- Mention de transparence et option « votre IA » (ECOSYSTEME §10.3) -->
+        <div class="oc-note">
+          <p id="oc-note-text" class="oc-note-text">Propulsé par l'IA intégrée à Chrome. Vos textes restent sur votre appareil : ni le studio ni personne d'autre ne les récupère.</p>
+          <div class="oc-alt">
+            <button id="oc-alt-btn" class="oc-alt-btn" type="button" aria-expanded="false" aria-controls="oc-alt-panel">
+              <svg class="oc-alt-icon" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M7 2.75H4.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h7.5a1.5 1.5 0 0 0 1.5-1.5V9" />
+                <path d="M9.75 2.75h3.5v3.5" />
+                <path d="M13.25 2.75 7.75 8.25" />
+              </svg>
+              Utiliser votre IA
+            </button>
+            <div id="oc-alt-panel" class="oc-alt-panel kf-glass-panel" role="dialog" aria-labelledby="oc-alt-title" hidden>
+              <p id="oc-alt-title" class="oc-alt-title">Vous préférez votre propre IA ?</p>
+              <p class="oc-alt-text">Voici un modèle de prompt pour définir trois objectifs clairs avec l'IA de votre choix. Aucune rancune : nous préférons un utilisateur satisfait et rassuré à un utilisateur déçu.</p>
+              <button id="oc-prompt-copy" class="btn btn-secondary oc-mini-btn" type="button">Copier le modèle de prompt</button>
+              <p id="oc-prompt-status" class="oc-alt-status" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- « Les autres créations du studio » (DESIGN §5.11) : en fin de page, une fois le travail terminé. -->
+      <section class="others" aria-labelledby="others-title">
+        <h2 id="others-title" class="section-title-quiet">Les autres créations du studio</h2>
+        <div class="others-box kf-glass-soft">
+          <ul class="others-list">
+            <li>
+              <span class="others-name"><a class="link" href="creations/keep-focus.html">Keep Focus</a></span>
+              <p class="others-text">Restez concentré sur vos objectifs de la semaine.</p>
+              <span class="status status-bientot">Bientôt</span>
+            </li>
+            <li>
+              <span class="others-name">Plus tard</span>
+              <p class="others-text">Mettez une pensée de côté sans quitter votre travail.</p>
+              <span class="status status-avenir">À venir</span>
+            </li>
+            <li>
+              <span class="others-name">L'Essentiel</span>
+              <p class="others-text">Le résumé d'une page en un clic, à emporter où vous voulez.</p>
+              <span class="status status-avenir">À venir</span>
+            </li>
+          </ul>
+          <p class="others-more"><a class="link" href="index.html#creations">Voir toutes les créations du studio</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <nav class="legal-nav" aria-label="Engagements et informations légales">
+        <a href="constitution.html">Notre Constitution</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+        <a href="cookies.html">Gestion des cookies</a>
+        <a href="cgu.html">Conditions d'utilisation</a>
+      </nav>
+      <p class="signature">Créé par le <a class="signature-mark" href="studio.html">studio <span class="signature-mk">MK</span></a></p>
+    </footer>
+  </div>
+
+  <script src="js/keep-focus-link.js"></script>
+  <script src="js/objectifs.js"></script>
+</body>
+</html>

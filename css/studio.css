@@ -1,0 +1,319 @@
+/* Studio MK • Créations
+   Toutes les valeurs viennent de docs/design-system/generated/tokens.css.
+   Espacements autorisés (px) : 2 3 4 6 8 10 12 14 16 18 20 22 24 28 40 44. */
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 1. Fond à trois halos */
+.blob-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(38% 32% at 18% 20%, rgba(var(--accent-rgb), 0.35), transparent 70%),
+    radial-gradient(42% 38% at 85% 15%, var(--color-blob-danger), transparent 70%),
+    radial-gradient(50% 45% at 50% 100%, var(--color-blob-indigo), transparent 70%),
+    var(--color-bg);
+}
+
+/* Groupe centré : 560 + 28 + 300 (même largeur que la page de réglages) */
+.page {
+  max-width: calc(var(--col-main) + var(--col-gap) + var(--col-side));
+  margin: 0 auto;
+  padding: 40px 24px 48px;
+}
+
+main { display: flex; flex-direction: column; gap: 18px; }
+
+/* Typographie */
+.page-title { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+.block-title { margin: 0 0 4px; font-size: 15px; font-weight: 600; }
+.section-title { margin: 0; font-size: 15px; font-weight: 600; }
+.section-title-quiet { margin: 0 0 12px; font-size: 14px; font-weight: 600; color: var(--color-text-secondary); }
+.body { margin: 0; font-size: 13.5px; line-height: 1.5; }
+.hint { margin: 0; font-size: 12.5px; color: var(--color-text-secondary); }
+.label { display: block; margin: 0 0 6px; font-size: 10.5px; font-weight: 700; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; }
+.tabular { font-variant-numeric: tabular-nums; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* 2. En-tête */
+.site-header { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+/* Le nom et le sous-titre gardent leur largeur ; le menu passe dessous plutôt que de se tasser. */
+.site-header > div { flex: 1 1 240px; min-width: 0; }
+.site-header > .site-nav { flex: none; }
+.monogram {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-card-solid);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+  color: var(--color-accent-text);
+  font-family: "Apple Chancery", "Snell Roundhand", "Monotype Corsiva", "Lucida Calligraphy", "Segoe Script", cursive;
+  font-style: italic;
+  font-size: 18px;
+}
+
+/* « MK » du nom du studio : même écriture manuscrite que la signature (DESIGN §6.1) */
+.brand-mk {
+  font-family: "Apple Chancery", "Snell Roundhand", "Monotype Corsiva", "Lucida Calligraphy", "Segoe Script", cursive;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--color-accent-text);
+}
+
+.site-nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.site-nav a { font-size: 13px; font-weight: 500; white-space: nowrap; color: var(--color-text-secondary); text-decoration: none; transition: color var(--motion-fast); }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--color-accent-text); }
+
+/* Cartes */
+.card { padding: 20px 22px; }
+
+/* 3. Introduction */
+.intro .body { margin-top: 12px; color: var(--color-text); }
+.intro-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+.counter { font-size: 12px; font-weight: 600; color: var(--color-text-secondary); }
+
+/* Boutons (DESIGN §5.1) */
+.btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 18px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--motion-fast), transform var(--motion-press);
+}
+.btn:active { transform: scale(0.98); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--color-accent); color: var(--color-accent-contrast); }
+.btn-primary:hover { background: var(--color-accent-hover); }
+.btn-secondary { background: var(--color-fill-secondary); color: var(--color-text); }
+.btn-secondary:hover:not(:disabled) { background: var(--color-fill-secondary-hover); }
+
+.link { font-size: 12px; color: var(--color-accent-text); text-decoration: none; }
+/* Un lien dans une phrase prend la taille du texte qui l'entoure (mentions de pages, DESIGN §8 règle 10). */
+p .link, li .link, dd .link, blockquote .link, .others-text .link { font-size: inherit; }
+.link:hover { text-decoration: underline; }
+.link-quiet { color: var(--color-text-tertiary); }
+
+/* Focus visible (DESIGN §9.2) */
+:where(a, button, input):focus-visible { outline: 2px solid var(--color-accent-soft); outline-offset: 2px; }
+
+/* 4. Filtres et recherche */
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter {
+  appearance: none;
+  min-height: 28px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-fill-secondary);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--motion-fast), color var(--motion-fast);
+}
+.filter:hover { background: var(--color-fill-secondary-hover); }
+.filter[aria-pressed="true"] { background: var(--color-accent-soft); color: var(--color-accent-text); }
+
+.field {
+  width: 220px;
+  padding: 7px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-card-solid);
+  font-family: inherit;
+  font-size: 12.5px;
+  color: var(--color-text);
+}
+.field::placeholder { color: var(--color-text-tertiary); }
+.field:focus { outline: 2px solid var(--color-accent-soft); }
+
+/* 5. Grille des créations */
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 10px 0 12px; }
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* Carte projet : surface OPAQUE (pas de verre dans une grille répétée) */
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 22px;
+  background: var(--glass-card-opaque);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.project[hidden] { display: none; }
+.project-head { display: flex; align-items: center; gap: 12px; }
+.project-name-link { color: inherit; text-decoration: none; }
+.project-name-link:hover { color: var(--color-accent-text); }
+.project-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-soft);
+  color: var(--color-accent-text);
+  font-size: 18px;
+  font-weight: 700;
+}
+.project-icon img { width: 48px; height: 48px; display: block; }
+.project-icon.has-image { background: none; }
+.project-name { margin: 0; font-size: 15px; font-weight: 600; }
+.project-type { margin: 2px 0 0; }
+.project-tagline { margin: 0; font-size: 13.5px; line-height: 1.5; }
+.project-desc { flex: 1; }
+.project-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.project-links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+
+.badge-example {
+  margin-left: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--color-fill-secondary);
+  color: var(--color-text-secondary);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Statut : point de 7 px + texte 12 / 600 (DESIGN §5.5). Jamais de rouge ici. */
+.status { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--color-text-tertiary); }
+.status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.status-disponible { color: var(--color-text); }
+.status-disponible::before { background: var(--color-success); }
+.status-dev { color: var(--color-accent-text); }
+
+.empty-state {
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: var(--color-fill-subtle);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+/* 6. Contact */
+.contact { margin-top: 10px; }
+.contact-box { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.contact-action { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+
+.contact-mail { font-size: 12px; color: var(--color-text-secondary); }
+
+/* 7. Pied de page : liens légaux + signature */
+.site-footer { margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.legal-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; }
+.legal-nav a { font-size: 12px; color: var(--color-text-secondary); text-decoration: none; }
+.legal-nav a:hover { color: var(--color-accent-text); text-decoration: underline; }
+.legal-nav a[aria-current="page"] { color: var(--color-accent-text); font-weight: 600; }
+.signature { margin: 0; text-align: center; font-size: 12px; color: rgba(29, 29, 31, 0.42); }
+.signature-mark { padding: 0 4px; border-radius: var(--radius-quote); background: rgba(var(--accent-rgb), 0.2); color: var(--color-text); text-decoration: none; transition: background-color var(--motion-fast); }
+a.signature-mark:hover { background: rgba(var(--accent-rgb), 0.28); }
+/* Mention « studio MK » dans un texte (DESIGN §7.1) : même rendu partout, quel que soit le style des liens autour. */
+.legal-doc a.signature-mark, .body a.signature-mark, .body-large a.signature-mark, .hint a.signature-mark, p a.signature-mark, h1 a.signature-mark, h2 a.signature-mark, h3 a.signature-mark { color: var(--color-text); text-decoration: none; }
+.signature a.signature-mark { color: var(--color-text); }
+.signature-mk {
+  font-family: "Apple Chancery", "Snell Roundhand", "Monotype Corsiva", "Lucida Calligraphy", "Segoe Script", cursive;
+  font-style: italic;
+  font-size: 1.45em;
+}
+
+/* Pages légales : colonne principale 560 + sommaire 300 (grille de la page de réglages) */
+.back-link { display: inline-block; margin-bottom: 18px; }
+.legal-layout {
+  display: grid;
+  grid-template-columns: var(--col-main) var(--col-side);
+  gap: var(--col-gap);
+  align-items: start;
+}
+.legal-doc { padding: 40px; min-width: 0; }
+.legal-doc h1 { margin: 0 0 4px; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+.legal-doc .updated { margin: 0 0 20px; }
+.legal-doc h2 { margin: 28px 0 8px; font-size: 15px; font-weight: 600; scroll-margin-top: 24px; }
+.legal-doc h3 { margin: 16px 0 6px; font-size: 14px; font-weight: 600; color: var(--color-text-secondary); }
+.legal-doc p, .legal-doc li { font-size: 13.5px; line-height: 1.5; }
+.legal-doc p { margin: 0 0 10px; }
+.legal-doc ul { margin: 0 0 10px; padding-left: 20px; }
+.legal-doc li { margin-bottom: 4px; }
+.legal-doc a { color: var(--color-accent-text); }
+.legal-doc dl { margin: 0 0 10px; display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; font-size: 13.5px; line-height: 1.5; }
+.legal-doc dt { color: var(--color-text-secondary); }
+.legal-doc dd { margin: 0; }
+.legal-doc table { width: 100%; border-collapse: collapse; margin: 0 0 10px; font-size: 12.5px; }
+.legal-doc th, .legal-doc td { padding: 8px 10px; border-bottom: 1px solid var(--color-border); text-align: left; vertical-align: top; }
+.legal-doc th { font-size: 10.5px; font-weight: 700; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; }
+.table-scroll { overflow-x: auto; }
+.legal-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 10px; }
+
+.legal-toc { position: sticky; top: 24px; padding: 20px 22px; }
+.legal-toc ol { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.6; }
+.legal-toc a { color: var(--color-text-secondary); text-decoration: none; }
+.legal-toc a:hover { color: var(--color-accent-text); text-decoration: underline; }
+
+/* Bandeaux (DESIGN §5.6) */
+.banner { margin: 0 0 20px; padding: 12px 16px; border-radius: var(--radius-md); font-size: 13px; line-height: 1.5; }
+.banner-warning { background: var(--color-warning-bg); border: 1px solid var(--color-warning-border); }
+.banner-welcome { background: var(--color-accent-soft); border: 1px solid rgba(var(--accent-rgb), 0.3); }
+
+/* Information encore inconnue : signalée, jamais inventée (DESIGN §8.8) */
+.todo { padding: 0 4px; border-radius: var(--radius-quote); background: var(--color-warning-bg); color: var(--color-text-secondary); font-style: italic; }
+
+/* Une colonne sous 980 px */
+@media (max-width: 980px) {
+  .page { max-width: calc(var(--col-main) + 48px); }
+  .legal-layout { grid-template-columns: 1fr; }
+  .legal-toc { position: static; order: -1; }
+}
+@media (max-width: 600px) {
+  .legal-doc { padding: 20px 22px; }
+  .legal-doc dl { grid-template-columns: 1fr; gap: 2px; }
+  .legal-doc dd { margin-bottom: 8px; }
+}
+@media (max-width: 600px) {
+  .toolbar { flex-direction: column; align-items: stretch; }
+  .field { width: 100%; }
+  .contact-action { align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .filter { transition: none; }
+  .btn:active { transform: none; }
+}

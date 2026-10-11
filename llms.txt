@@ -1,0 +1,27 @@
+# Studio MK
+
+> Extensions Chrome et solutions IA pour étudiants et professionnels, conçues par le Studio MK : des outils calmes pour travailler mieux.
+
+Contact : myrokova.a@gmail.com
+
+- [Le studio](https://studiomk-a.github.io/studio.html) : l'histoire du Studio MK, ses principes et sa façon de travailler.
+- [Nouveautés](https://studiomk-a.github.io/nouveautes.html) : les changements de toutes les créations, du plus récent au plus ancien.
+- [Notre Constitution](https://studiomk-a.github.io/constitution.html) : comment le studio vit sans vendre ni données ni accès, grâce à des contributions volontaires et sans contrepartie.
+
+## Créations
+
+- [Keep Focus](https://studiomk-a.github.io/creations/keep-focus.html) (Extension Chrome, Bientôt) : Bloque les sites qui distraient pendant une session, rappelle vos objectifs dans une pastille discrète et freine honnêtement l'arrêt d'une session.
+- [L'Essentiel](https://studiomk-a.github.io/) (Extension Chrome, À venir) : Résume l'article ou la page ouverte en quelques points clés, avec l'IA intégrée à Chrome quand elle est disponible. Puis continuez la réflexion dans Claude ou ChatGPT, ou envoyez le résumé par e-mail.
+- [Plus tard](https://studiomk-a.github.io/) (Extension Chrome, À venir) : Une idée, un lien ou une tâche surgit en pleine concentration ? Un raccourci suffit pour la noter. Tout est classé et vous attend à la fin de la session, dans votre navigateur. Le compagnon naturel de Keep Focus.
+- [Objectifs clairs](https://studiomk-a.github.io/creations/objectifs-clairs.html) (Solution IA, Disponible) : Décrivez ce que vous voulez accomplir, même en vrac. L'IA intégrée à Chrome en tire trois objectifs précis et réalistes pour la semaine, prêts à noter dans Keep Focus. Vos textes restent sur votre appareil.
+- [Valeurs](https://studiomk-a.github.io/) (Solution IA, À venir) : Choisissez les quelques valeurs qui guident vos choix. Elles deviennent la boussole de vos objectifs et de vos journées.
+- [Vision](https://studiomk-a.github.io/) (Solution IA, À venir) : Décrivez en quelques phrases où vous voulez être dans un an, ou dans trois. Vos objectifs de la semaine vous en rapprochent, pas à pas.
+- [Mission](https://studiomk-a.github.io/) (Solution IA, À venir) : Une phrase qui dit ce que vous faites, et pour qui. Elle vous accompagne discrètement, à côté de vos objectifs.
+
+## Informations légales
+
+- [Mentions légales](https://studiomk-a.github.io/mentions-legales.html)
+- [Politique de confidentialité](https://studiomk-a.github.io/confidentialite.html)
+- [Keep Focus : politique de confidentialité](https://studiomk-a.github.io/confidentialite-keep-focus.html)
+- [Gestion des cookies](https://studiomk-a.github.io/cookies.html)
+- [Conditions d'utilisation](https://studiomk-a.github.io/cgu.html)
